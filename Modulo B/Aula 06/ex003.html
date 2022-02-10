@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 3 - Tratamento de Dados</title>
+  <style>
+    body {
+      font: normal 10pt Arial;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    var nome = window.prompt('Qual é o seu nome?');
+    document.write(`Olá <strong>${nome}</strong>, seu nome tem ${nome.length} caracteres.<br/>`);
+    document.writeln(`Seu nome todo maíusculo: ${nome.toUpperCase()}.<br/>`);
+    document.writeln(`Seu nome todo minúsculo: ${nome.toLowerCase()}.<br/><br/>`);
+
+    var salario = Number(window.prompt('Digite seu salário:'));
+    document.write(`O salário de ${nome} com 2 casas decimais: ${salario.toFixed(2)}<br/>`);
+    document.write(`O seu salário formatado é: ${salario.toFixed(2).replace('.', ',')}<br/>`);
+    document.write(`O seu salário em reais é: ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br/>`);
+    document.write(`O seu salário em dólar é: ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}<br/>`);
+    document.write(`O seu salário em euros é: ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}<br/>`);
+  </script>
+</body>
+</html>
