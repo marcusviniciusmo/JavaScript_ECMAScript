@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 1 - Operadores (parte 2)</title>
+</head>
+<body>
+  <script>
+    document.write('Operadores Relacionais:<br/>');
+    document.write(`5 > 2 => ${5 > 2}<br/>`);
+    document.write(`7 < 4 => ${7 < 4}<br/>`);
+    document.write(`8 >= 8 => ${8 >= 8}<br/>`);
+    document.write(`9 <= 7 => ${9 <= 7}<br/>`);
+    document.write(`5 == 5 => ${5 == 5}<br/>`);
+    document.write(`4 != 4 => ${4 != 4}<br/><br/>`);
+
+    document.write('Operadores de Identidade:<br/>');
+    document.write(`5 == 5 => ${5 == 5}<br/>`);
+    document.write(`5 == '5' => ${5 == '5'}<br/>`); // Tipos diferentes, porém tem a mesma grandeza
+    document.write(`5 === '5' => ${5 === '5'}<br/>`); // Igualdade restrita
+    document.write(`5 === 5 => ${5 === 5}<br/><br/>`);
+
+    document.write('Operadores Lógicos:<br/>');
+    document.write('Negação: (!)<br/>');
+    document.write(`!true => ${!true}<br/>`);
+    document.write(`!false => ${!false}<br/>`);
+    document.write('Conjunção: (&&)<br/>');
+    document.write(`true && true => ${true && true}<br/>`);
+    document.write(`true && false => ${true && false}<br/>`);
+    document.write(`false && true => ${false && true}<br/>`);
+    document.write(`false && false => ${false && false}<br/>`);
+    document.write('Disjunção: (||)<br/>');
+    document.write(`true || true => ${true || true}<br/>`);
+    document.write(`true || false => ${true || false}<br/>`);
+    document.write(`false || true => ${false || true}<br/>`);
+    document.write(`false || false => ${false || false}<br/><br/>`);
+
+    document.write('ORDEM DE PRECEDÊNCIA:<br/>');
+    document.write('1. Operadores Aritméticos<br/>');
+    document.write('2. Operadores Relacionais<br/>');
+    document.write('3. Operadores Lógicos<br/>');
+    document.write('3.1. Operador Lógico:(!)<br/>');
+    document.write('3.2. Operador Lógico: (&&)<br/>');
+    document.write('3.3. Operador Lógico: (||)<br><br/>');
+    var a = 5;
+    var b = 8;
+    document.write(`a = ${a}<br/>`);
+    document.write(`b = ${b}<br/>`);
+    document.write(`a > b && b % 2 == 0 => ${a > b && b % 2 == 0}<br/>`);
+    document.write(`a <= b || b / 2 == 2 => ${a <= b || b / 2 == 2}<br/><br/>`);
+
+    document.write('OPERADOR TERNÁRIO:<br/>');
+    document.write('test ? true : false<br/>');
+    var media1 = 5.5;
+    var media2 = 9.9;
+    document.write(`Media1 = ${media1} => ${media1 >= 7 ? 'Aprovado' : 'Reprovado'}<br/>`);
+    document.write(`Media2 = ${media2} => ${media2 >= 7 ? 'Aprovado' : 'Reprovado'}<br/>`);
+    var x = 8;
+    document.write(`x = ${x}<br/>`);
+    var res = x % 2 == 0 ? 5 : 9;
+    document.write(`res = x % 2 == 0 ? 5 : 9 => res = ${res}<br/>`);
+    var idade = 19;
+    document.write(`idade = ${idade}<br/>`);
+    var r = idade >= 18 ? 'MAIOR' : 'MENOR';
+    document.write(`r = idade >= 18 ? MAIOR : MENOR => r = ${r}<br/>`);
+  </script>
+</body>
+</html>
