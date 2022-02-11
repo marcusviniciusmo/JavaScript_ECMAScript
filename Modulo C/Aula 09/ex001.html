@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 1 - Introdução ao DOM</title>
+  <style>
+    body {
+      background: rgb(68, 125, 199);
+      color: #FFFFFF;
+      font: normal 10pt Arial;
+    }
+  </style>
+</head>
+<body>
+  <h1 name="titulo">Iniciando os estudos com DOM</h1>
+  <p id="primeiroParagrafo">Aqui vai o resultado</p>
+  <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+  <div class="container">Clique em mim</div><br/>
+  <script>
+    window.document.write(`Charset: ${window.document.charset}<br/>`);
+    window.document.write(`Navigator: ${window.navigator.appName}<br/>`);
+    window.document.write(`Title: ${window.document.title}<br/>`);
+    window.document.write(`URL: ${window.document.URL}<br/><br/>`);
+
+    document.write('<strong>Selecionando elementos da DOM:</strong><br/>');
+    document.write('<u>Por Marca</u><br/>');
+    document.write('document.getElementsByTagName()<br>');
+    var p1 = window.document.getElementsByTagName('p')[0]; // Primeiro elemento p
+    p1.style.color = 'yellow';
+    document.write(`Está escrito assim: ${p1.innerText}<br/>`);
+    var p2 = window.document.getElementsByTagName('p')[1]; // Segundo elemento p
+    p2.style.color = 'lightgreen';
+    document.write(`Está escrito assim: ${p2.innerHTML}<br/>`);
+
+    document.write('<br/><u>Por ID</u><br/>');
+    document.write('document.getElementById()<br/>');
+    var pId = window.document.getElementById('primeiroParagrafo');
+    document.write(`Está escrito assim: ${pId.innerText}<br/>`);
+
+    document.write('<br/><u>Por Nome</u><br/>');
+    document.write('document.getElementsByName()<br/>');
+    var hTtitulo = window.document.getElementsByName('titulo')[0];
+    document.write(`Está escrito assim: ${hTtitulo.innerText}<br/>`);
+
+    document.write('<br/><u>Por Classe</u><br/>');
+    document.write('document.getElementsByClassName()<br/>');
+    var divContainer = window.document.getElementsByClassName('container')[0];
+    document.write(`Está escrito: ${divContainer.innerHTML}<br/>`);
+    
+    document.write('<br/><u>Por Seletor</u><br/>');
+    document.write('document.querySelector()<br/>');
+    document.write('document.querySelectorAll()<br/>');
+    var q1 = window.document.querySelector('div.container');
+    document.write(`Está escrito: ${q1.innerText}<br/>`);
+    q1.style.background = 'black';
+    var q2 = window.document.querySelectorAll('p')[1];
+    document.write(`Está escrito: ${q2.innerHTML}<br/>`);
+    q2.style.background = 'red';
+  </script>
+</body>
+</html>
