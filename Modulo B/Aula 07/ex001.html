@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 1 - Operadores (parte 1)</title>
+</head>
+
+<body>
+  <script>
+    document.write('ORDEM DE PRECEDÊNCIA - Operadores Lógicos:<br/>');
+    document.write('1. () => parênteses<br/>');
+    document.write('2. ** => potência<br/>');
+    document.write('3. * / % => multiplicação, divisão, resto da divisão<br/>');
+    document.write('4. + - => adição, subtração<br/><br/>');
+
+    document.write('ATRIBUIÇÃO SIMPLES:<br/>');
+    document.write('Exemplos de atribuição com os valores 5 e 3:<br/>');
+    var a = 5 + 3;
+    document.write(`var a = 5 + 3 => ${a}<br/>`);
+    var b = a % 5;
+    document.write(`var b = a % 5 => ${b}<br/>`);
+    var c = 5 * b ** 2;
+    document.write(`var c = 5 * b ** 2 => ${c}<br/>`);
+    var d = 10 - a / 2;
+    document.write(`var d = 10 - a / 2 => ${d}<br/>`);
+    var e = 6 * 2 / d;
+    document.write(`var e = 6 * 2 / d => ${e}<br/>`);
+    var f = b % e + 4 / e;
+    document.write(`var f = b % e + 4 / e => ${f}<br/><br/>`);
+
+    document.write('Auto-atribuições:<br/>');
+    var n = 3;
+    document.write(`var n = ${n}<br/>`);
+    n += 4;
+    document.write(`n = n + 4 => n = ${n}<br/>`);
+    n -= 5;
+    document.write(`n = n - 5 => n = ${n}<br/>`);
+    n *= 4;
+    document.write(`n = n * 4 => n = ${n}<br/>`);
+    n /= 2;
+    document.write(`n = n / 2 =>  n = ${n}<br/>`);
+    n **= 2;
+    document.write(`n = n ** 2 => n = ${n}<br/>`);
+    n %= 5;
+    document.write(`n = n % 5 => n = ${n}<br/><br/>`);
+
+    document.write('PÓS-INCREMENTO:<br/>')
+    var i = 5;
+    var j = 5;
+    document.write(`i = ${i} & j = ${j}<br/>`);
+    i++;
+    document.write(`i++ => i = ${i}<br/>`);
+    j--;
+    document.write(`j-- => j = ${j}<br/><br/>`);
+
+    document.write('PRÉ-INCREMENTO:<br/>');
+    var i = 5;
+    var j = 5;
+    document.write(`i = ${i} & j = ${j}<br/>`);
+    ++i;
+    document.write(`++i => i = ${i}<br/>`);
+    --j;
+    document.write(`--j => j = ${j}<br/>`);
+  </script>
+</body>
+
+</html>
