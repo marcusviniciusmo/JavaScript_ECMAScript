@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 1 - Eventos DOM</title>
+  <style>
+    div#area {
+      font: normal 15pt Arial;
+      background: rgb(42, 139, 32);
+      color: #FFFFFF;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="area">
+    Interaja...
+  </div>
+  <!-- 
+    mouseenter - entrar com o mouse na div
+    mousemove - passar por cima da div
+    mousedown - clicar na div e segurar o click
+    mouseup - soltar o click na div
+    click - clicar
+    mouseout - sair com o mouse da div
+   -->
+
+   <script>
+     var area = window.document.getElementById('area');
+     area.addEventListener('click', clicar);
+     area.addEventListener('mouseenter', entrar);
+     area.addEventListener('mouseout', sair);
+
+     function clicar() {
+       area.innerText = 'Clicou !!!';
+       area.style.background = 'yellow';
+       area.style.color = '#000000';
+     }
+     function entrar() {
+       area.innerText = 'Entrou !!!';
+       area.style.background = 'darkgreen';
+     }
+     function sair() {
+       area.innerText = 'Saiu !!!';
+       area.style.background = 'rgb(42, 139, 42)';
+     }
+   </script>
+</body>
+</html>

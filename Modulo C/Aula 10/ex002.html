@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 2 - Eventos DOM</title>
+  <style>
+    body {
+      font: normal 15pt Arial;
+    }
+    div#res {
+      margin-top: 10px;
+    }
+    input {
+      font: normal 15pt Arial;
+      width: 100px;
+      border-radius: 5px;
+    }
+    input.btnSoma {
+      background-color: rgba(47, 47, 211, 1);
+      color: #FFFFFF;
+    }
+    input.btnSoma:hover {
+      background-color: rgba(47, 47, 211, .7);
+      color: #000000;
+    }
+    input.btnLimpa {
+      background-color: #CECECE;
+    }
+    input.btnLimpa:hover {
+      background-color: #6D6C6C;
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+  <h1>Somando valores</h1>
+  <input type="number" name="txtn1" id="txtn1"> +
+  <input type="number" name="txtn2" id="txtn2">
+  <input type="button" class="btnSoma" value="Somar" onclick="somar()">
+  <input type="button" class="btnLimpa" value="Limpar" onclick="limpar()">
+  <div id="res">Resultado</div>
+  <script>
+    function somar() {
+      var tn1 = window.document.getElementById('txtn1');
+      var tn2 = window.document.getElementById('txtn2');
+      var res = window.document.querySelector('div#res');
+      var n1 = Number(tn1.value);
+      var n2 = Number(tn2.value);
+      var sum = n1 + n2;
+      res.innerHTML = `Resultado = <strong>${sum}</strong>`;
+    }
+
+    function limpar() {
+      window.document.getElementById('txtn1').value = null;
+      window.document.getElementById('txtn2').value = null;
+      res.innerHTML = 'Resultado';
+    }
+  </script>
+</body>
+</html>
