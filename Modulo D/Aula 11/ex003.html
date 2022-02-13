@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 3 - Condições (parte 1)</title>
+  <style>
+    body {
+      font: normal 12pt Arial;
+    }
+    input#txtVel {
+      width: 50px;
+    }
+    input.btnCalcular, input.btnLimpar {
+      color: #FFFFFF;
+      height: 30px;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+    input.btnCalcular {
+      background: rgba(42, 42, 229, 1);
+    }
+    input.btnCalcular:hover {
+      background: rgba(42, 42, 229, .7);
+      color: #000000;
+    }
+    input.btnLimpar {
+     background: rgba(229, 42, 42, 1); 
+    }
+    input.btnLimpar:hover {
+      background: rgba(229, 42, 42, .7);
+      color: #000000;
+    }
+    div#res {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sistetma de Multas</h1>
+  Velocidade do carro: <input type="number" name="txtVel" id="txtVel"> Km/h
+  <input type="button" class="btnCalcular" value="Verificar" onclick="calcular()">
+  <input type="button" class="btnLimpar" value="Limpar" onclick="limpar()">
+  <div id="res">
+
+  </div>
+  <script>
+    function calcular() {
+      var txtVelocidade = window.document.querySelector('input#txtVel');
+      var res = window.document.querySelector('div#res');
+      var vel = Number(txtVelocidade.value);
+      res.innerHTML = `<p>Sua velocidade é de <strong>${vel}km/h</strong>.</p>`;
+      res.innerHTML += checarVelocidade(vel);
+    }
+
+    function limpar() {
+      window.document.querySelector('input#txtVel').value = null;
+      window.document.querySelector('div#res').innerHTML = null;
+    }
+
+    function checarVelocidade(velocidade) {
+      var msg = '';
+
+      if (velocidade > 60.0) {
+        msg += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade!</p>`;
+        msg += `<p>Dirija sempre devagar e com cinto de segurança!</p>`
+      } else {
+        msg += `<p>Dirija sempre com o cinto de segurança.</p>`;
+      }
+
+      return msg;
+    }
+  </script>
+</body>
+</html>
