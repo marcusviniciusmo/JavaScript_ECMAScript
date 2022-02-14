@@ -1,0 +1,59 @@
+body {
+  background: rgb(70, 142, 236);
+  font: normal 12pt Arial;
+  color: #8b8b8b;
+}
+
+header {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+section {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 15px;
+  width: 500px;
+  margin: auto;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .363);
+}
+
+input#txtAno {
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+#btn {
+  background: rgba(42, 42, 299, 1);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+  color: #FFFFFF;
+  border: none;
+  height: 25px;
+  margin-left: 15px;
+  border-radius: 5px;
+}
+
+#btn:hover {
+  background: rgba(42, 42, 299, .7);
+  border-radius: 10px;
+}
+
+section div#res img {
+  margin-top: 10px;
+}
+
+footer {
+  color: #FFFFFF;
+  text-align: center;
+  font-style: italic;
+}
+
+p#erro {
+  color: #FF0000;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
