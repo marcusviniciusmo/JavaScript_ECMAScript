@@ -1,0 +1,56 @@
+body {
+  background: rgb(70, 142, 236);
+  font: normal 13pt Arial;
+  color: #8B8B8B;
+}
+
+header {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+section {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 15px;
+  width: 500px;
+  margin: auto;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .363);
+}
+
+.btn {
+  background: rgba(42, 42, 299, 1);
+  color: #FFFFFF;
+  border: none;
+  height: 20px;
+}
+
+.btn:hover {
+  background: rgba(42, 42, 299, .7);
+  border-radius: 5px;
+}
+
+div#res {
+  display: flex;
+  justify-content: center;
+}
+
+select#selectTabuada {
+  color: #8B8B8B;
+  border-radius: 3px;
+}
+
+select#selectTabuada option:hover {
+  background: #CECECE;
+}
+
+footer {
+  color: #FFFFFF;
+  text-align: center;
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
